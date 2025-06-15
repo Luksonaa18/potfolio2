@@ -7,6 +7,7 @@ import MacbookScroll from "../ui/MacbookScroll";
 import { Card, Carousel } from "../ui/page1";
 import { HoverEffect } from "../ui/page2";
 import { useRouter } from "next/navigation";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
 const cards = [
   {
     src: "/do.png", // Use string path for image
@@ -87,7 +88,6 @@ const Header = () => {
   useEffect(() => {
     document.body.style.overflow = menu ? "hidden" : "auto";
   }, [menu]);
-
 
   return (
     <>
@@ -192,7 +192,12 @@ const Header = () => {
           </>
         )}
       </AnimatePresence>
-
+      <TextGenerateEffect
+        words="Recreate your ideas as a code, With me"
+        duration={3.4}
+        className="p-5 text-center"
+        filter={true}
+      />
       {/* Featured Work / Cards */}
       <section className="py-16 px-6 md:px-12">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-10 text-neutral-100">

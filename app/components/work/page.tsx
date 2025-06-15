@@ -7,7 +7,7 @@ import fb from "../../../public/fb.png";
 
 const Projects = () => {
   return (
-    <section className="w-full py-16 bg-black">
+    <section className="w-full py-16">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-white text-center mb-16">
           My Featured Projects
