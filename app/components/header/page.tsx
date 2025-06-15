@@ -6,6 +6,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import MacbookScroll from "../ui/MacbookScroll";
 import { Card, Carousel } from "../ui/page1";
 import { HoverEffect } from "../ui/page2";
+import { useRouter } from "next/navigation";
 const cards = [
   {
     src: "/do.png", // Use string path for image
@@ -76,15 +77,17 @@ const hoverCards = [
 const Header = () => {
   const [showIntro, setShowIntro] = useState(true);
   const [menu, setMenu] = useState(false);
-
+  const redirect = useRouter();
   useEffect(() => {
     const timer = setTimeout(() => setShowIntro(false), 3500);
+    document.body.style.overflow = showIntro ? "hidden" : "auto";
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     document.body.style.overflow = menu ? "hidden" : "auto";
   }, [menu]);
+
 
   return (
     <>
@@ -166,9 +169,24 @@ const Header = () => {
                 </li>
               </ul>
               <div className="mt-10 flex justify-around text-2xl text-neutral-700">
-                <FaGithub className="hover:text-black cursor-pointer" />
-                <FaInstagram className="hover:text-pink-500 cursor-pointer" />
-                <FaLinkedin className="hover:text-blue-600 cursor-pointer" />
+                <FaGithub
+                  onClick={() => redirect.push("https://github.com/Luksonaa18")}
+                  className="hover:text-black cursor-pointer"
+                />
+                <FaInstagram
+                  onClick={() =>
+                    redirect.push("https://www.instagram.com/lukssonaa1122/")
+                  }
+                  className="hover:text-pink-500 cursor-pointer"
+                />
+                <FaLinkedin
+                  onClick={() =>
+                    redirect.push(
+                      "https://www.linkedin.com/in/luka-zhozhadze-143259341/"
+                    )
+                  }
+                  className="hover:text-blue-600 cursor-pointer"
+                />
               </div>
             </motion.div>
           </>
