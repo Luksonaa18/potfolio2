@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import MacbookScroll from "../ui/page";
+import MacbookScroll from "../ui/MacbookScroll";
 import { Card, Carousel } from "../ui/page1";
 import { HoverEffect } from "../ui/page2";
 const cards = [
@@ -191,7 +191,7 @@ const Header = () => {
       <HoverEffect items={hoverCards} />
 
       <div className="lg:hidden">
-        <MacbookScroll />
+        <MacbookScroll showGradient={true} />
       </div>
     </>
   );
