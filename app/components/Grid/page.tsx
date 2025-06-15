@@ -1,3 +1,4 @@
+"use client"
 import { cn } from "@/app/lib/utils";
 export const GridBackground = ({ children }: { children: React.ReactNode }) => {
   return (

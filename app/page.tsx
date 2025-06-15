@@ -1,3 +1,4 @@
+"use client"
 import { GridBackground } from "./components/Grid/page";
 import Header from "./components/header/page";
 
