@@ -198,6 +198,16 @@ const Header = () => {
         className="p-5 text-center"
         filter={true}
       />
+      <TextGenerateEffect
+        words="I'm Lukas 18 year old Web-Developer,as a developer i always strive to
+          make my clients satisfied by my work.I love to help people recreate
+          their ideas with me,Which then also comes in handy for their Company.
+          Thats Why you should choose me-JUST DO IT!"
+        duration={0.5}
+        className="p-5 text-center"
+        filter={true}
+      />
+
       {/* Featured Work / Cards */}
       <section className="py-16 px-6 md:px-12">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-10 text-neutral-100">
