@@ -24,9 +24,9 @@ import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
-import Image from "next/image";
 
-export const MacbookScroll = ({
+
+export default function MacbookScroll({
   src,
   showGradient,
   title,
@@ -36,7 +36,7 @@ export const MacbookScroll = ({
   showGradient?: boolean;
   title?: string | React.ReactNode;
   badge?: React.ReactNode;
-}) => {
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -116,7 +116,7 @@ export const MacbookScroll = ({
       </div>
     </div>
   );
-};
+}
 
 export const Lid = ({
   scaleX,
