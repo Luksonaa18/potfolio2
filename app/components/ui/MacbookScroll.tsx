@@ -2,6 +2,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { MotionValue, motion, useScroll, useTransform } from "motion/react";
 import { cn } from "../../lib/utils";
+import image from "@/public/opera.png";
 
 import {
   IconBrightnessDown,
@@ -24,7 +25,7 @@ import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
-
+import Image from "next/image";
 
 export default function MacbookScroll({
   src,
@@ -164,12 +165,8 @@ export const Lid = ({
         className="absolute inset-0 h-96 w-[32rem] rounded-2xl bg-[#010101] p-2"
       >
         <div className="absolute inset-0 rounded-lg bg-black" />
-        <h1 className="absolute text-3xl font-bold text-white">
-          Just Contact me
-        </h1>
-        <h1 className="absolute text-3xl font-bold top-15 text-white">
-          Dive in a Tech-Space and let me recreate your ideas as a Code
-        </h1>
+
+        <Image alt="opera" src={image} className="absolute" />
       </motion.div>
     </div>
   );
